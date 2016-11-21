@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+   <link rel="shortcut icon"  href="img/bg-icons/right.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/public.css">
+     <link rel="stylesheet" href="css/cart.css">
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+     <script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+   $(function(){
+   	$(".header").load("header.html");
+   	$(".footer").load("footer.html");
+   })
+	</script>
+   <script type="text/javascript">
+   $(function(){
+
+      $.cookie.json = true;
+      var products = $.cookie("products");
+   if(!products||products.length===0){
+      $("tbody").html("购物车为空，<a href='index.html'>去购物</a>");
+      return;
+   }
+ 
+   $.each(products,function(index,element){
+    $(".row:first").clone(true).appendTo("tbody").data("product",element).
+    children(".name").text(element.name+"("+element.color+")").end().children(".shiChangP").text(element.normal_p).end().children(".shangChangP").text(element.after_p).end().children(".amount").html("<span class='minus'>-</span><input type='text' class='num' value='"+element.shuliang+"'><span class='add'>+</span>").next(".sub").text(parseFloat(element.after_p)*parseFloat(element.shuliang)).next(".oper").html("<a href='javascript:void(0);'>删除</a>");
+      });
+    heJi();
+    zongShu();
+    jiFen();
+   $("tbody").on("click","a",function(){
+    var $row = $(this).parents(".row"),
+    prod = $row.data("product");
+  // 查找 prod 在 products 数组中的索引
+  var index = $.inArray(prod, products);
+  // 如果索引存在(>=0)
+  if (index !== -1) {
+    products.splice(index, 1); // 从数组中移除一个元素
+    // 将删除后的数组保存回 cookie
+    $.cookie("products", products, {expires:7, path:"/"});
+
+    // 从页面移除行
+    $row.remove();
+    heJi();
+    zongShu();
+    jiFen();
+  }
+   });
+  $(".minus").click(function() {
+  // 减号所在行
+  var $row = $(this).parents(".row");
+  // 获取原有的数量
+  var shuliang = parseInt($row.find('.num').val());
+  if (shuliang <= 1)
+    return;
+  // 计算减后的数量
+  shuliang -= 1;
+  // 将计算后的数量保存到 cookie 中对应的商品数量上
+  $row.data("product").shuliang = shuliang;
+  $.cookie("products", products, {expires:7, path:"/"});
+  // 将计算后的数量放回到页面中显示
+  $row.find(".num").val(shuliang);
+  // 更新小计金额
+  var _sub = (parseFloat($row.find(".shangChangP").text()) * shuliang).toFixed(2);
+  $row.find(".sub").text(_sub);
+  heJi();
+    zongShu();
+    jiFen();
+});
+
+/* 加数量 */
+$(".add").click(function() {
+  // 加号所在行
+  var $row = $(this).parents(".row");
+  // 获取原有的数量
+  var shuliang = parseInt($row.find('.num').val());
+  // 计算加后的数量
+  shuliang += 1;
+  // 将计算后的数量保存到 cookie 中对应的商品数量上
+  $row.data("product").shuliang = shuliang;
+  $.cookie("products", products, {expires:7, path:"/"});
+  // 将计算后的数量放回到页面中显示
+  $row.find(".num").val(shuliang);
+  // 更新小计金额
+  var _sub = parseFloat($row.find(".shangChangP").text()) * shuliang;
+  $row.find(".sub").text(_sub);
+  heJi();
+    zongShu();
+    jiFen();
+});
+/* 输入修改数量 */
+var tmpNum = 0;
+$(".num").focus(function(){
+  tmpNum = $(this).val();
+});
+$(".num").blur(function(){
+  // 获取输入的文本
+  var v = $(this).val(); // var v = this.value;
+  // 判断是否为数字
+  if (!(/^[1-9]\d*$/.test(v))) { // 不为数字
+    $(this).val(tmpNum);
+  } else { // 为数字，则保存到 cookie 中
+    var $row = $(this).parents(".row");
+    $row.data("product").shuliang = v;
+    $.cookie("products", products, {expires:7, path:"/"});
+    // 更新小计金额
+    var _sub = parseFloat($row.find(".shangChangP").text()) * parseInt(v);
+    $row.find(".sub").text(_sub);
+    heJi();
+    zongShu();
+    jiFen();
+  }
+});
+   function heJi(){
+     var $mon = $(".sub").not($(".sub:first"));
+     var total = 0;
+    $mon.each(function(){
+    total += parseFloat($(this).parents(".row").find(".sub").text());
+  });
+    $(".all_p").text(total.toFixed(2));
+   }
+   function zongShu(){
+     var $amount = $(".num");
+     var total = 0;
+     $amount.each(function(){
+      total += parseFloat($(this).parents(".row").find(".num").val());
+
+     });
+     $(".all_c").text(total.toFixed(2));
+   }
+   function jiFen(){
+      var $amount = $(".num");
+     var total = 0;
+     $amount.each(function(){
+      total += parseFloat($(this).parents(".row").find(".num").val());
+     });
+     $(".all_j").text(total.toFixed(2)*30);
+   }
+  //清空购物车
+  $("#give_up").click(function(){
+    if(confirm("您确定要清空购物车吗？")){
+    $.removeCookie("products", {path:"/"});
+    $("tbody").empty();
+    $("tbody").html("购物车为空，<a href='index.html'>去购物</a>");
+   heJi();
+    zongShu();
+    jiFen();
+  }
+    else{
+      alert("您取消了清空购物车,天狗感谢不清之恩！");
+    }
+  })
+ });
+   </script>
+</head>
+<body>
+    <div class="header"></div>
+	<div class="wrap">
+   <div class="cart_body">
+   <div class="cart_position">
+   <img src="img/bg-icons/cart1.gif" alt="购买进程">
+   </div>
+   <div class="tablein">
+   <table>
+   <thead>
+   <tr class="row">
+   	<td width="38%" class="name">产品名称</td>
+   	<td width="11%" class="shiChangP">市场价</td>
+   	<td width="11%" class="shangChangP">商城价</td>
+   	<td width="18%" class="amount">数量</td>
+   	<td width="11%" class="sub">小计</td>
+   	<td width="11%" class="oper">操作</td>
+   </tr>
+   </thead>
+   <tbody>
+   </tbody>
+   <tfoot>
+   <tr>
+   	<td colspan="6" align="left">
+    <p>共<b class="all_c">0</b>件商品  价格总计：<b class="all_p">0</b>(不含运费)</p>
+   	<a href="javascript:void(0)" id="give_up"><img src="img/bg-icons/giveup.gif" alt=""></a>
+   	</td>
+   </tr>
+   <tr>
+   	<td colspan="6" align="right">
+   	折后价格
+   	<b class="all_p">0</b>
+   	获得积分:<b class="all_j">0</b>
+   	</td>
+   </tr>
+   <tr><th colspan="6" align="right"><a href="index.html"><img src="img/bg-icons/gon.gif" alt=""> 继续购物</a>　<a href="/iusers/buyInfop.aspx"><img src="img/bg-icons/gomoney.gif" alt=""></a></th></tr>
+   </tfoot>
+   </table>
+</div>
+   </div>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>

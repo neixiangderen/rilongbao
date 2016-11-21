@@ -1,0 +1,97 @@
+#container{width:1200px;margin:0 auto;height:480px;position: relative;overflow: hidden;z-index: -1;}
+#container ul {list-style:none;top:0px;left:0px;position: absolute;}
+#container ul li{float: left;width:1270px;}
+#container ul li  a{display:block;margin:0 auto;width:1270px;height:480px;}
+#container ul .img_1 a{background: url(../img/banner/tg0591_falsh0.jpg) no-repeat -200px 0}
+#container ul .img_2 a{background: url(../img/banner/tg0591_falsh1.jpg) no-repeat   300px 0}
+#container ul .img_3 a{background: url(../img/banner/tg0591_falsh2.jpg) no-repeat   300px 0}
+#container ul .img_4 a{background: url(../img/banner/tg0591_falsh3.jpg) no-repeat  -120px 0}
+#pages{z-index:1;width:196px;height: 20px;position: relative; bottom:0px;background: #e1e1e1;opacity:0.6;left:50%;margin-left:-93px;}
+	#pages div{text-align:center;height: 20px;width: 20px;border-radius: 10px; background: #fff; float: left;margin:0 12px 0; }
+	#pages div.curr{background: red;}
+#container .ad_1{position: absolute;right:0;top:10px;width:189px;height:417px;}
+/* **************************************banner结束********************************************** */
+.logos{width:1200px;height:154px;background:#fff;position: relative;margin:0 auto;}
+ .shadow{left:0px;width: 1211px;height:8px;background: url(../img/bg-icons/bg_yinying.gif) no-repeat 0 0;text-indent: 9999px;position:absolute;bottom: 0;}
+.logos img{float: left;margin-top:40px;margin-left:15px;margin-right:15px;border:1px solid #eee;width: 110px;height:70px;}
+/* ***************************************logos结束******************************************* */
+.coms{margin:0 auto;width:1200px;position: relative;margin-bottom:35px; }
+.com{width:876px;height:405px;position: relative;top:20px;overflow:hidden;background: #fff;}
+.com .s_nav{width:842px;height:38px;position: absolute;left:16px;top:8px;border-bottom:1px solid #bb0000;}
+.com .s_nav li{float: left;height:100%;width:121px;}
+.com .s_nav .l_1 {text-align: center;background:#bb0000;color:#fff; font:18px/38px "";font-weight: bold;}
+.com .s_nav li {text-align: center;color:#000; font:18px/38px "";font-weight: bold;border-left: 1px solid #dfdfdf;}
+.com  .window_1 div{float: left;width:219px;height: 278px;padding-top:65px;}
+.com  .window_1 div p{width:186px;font:12px/36px "";padding-left:20px;clear: both;}
+.com  .window_1 {width:3504px;height:288px;position: absolute;left:0;top:38px;}
+.com  .window_1 .last{float: right;}
+.com  .window_1 div p span{color:#cf0f4c;}
+.com  .window_1 div  img{margin-left:28px;float: left;}
+.com_1{position:absolute;right: 0;top:22px; width:360px;height:405px;background: #fff;text-align: center;}
+/* ***********************秒杀结束************************************************ */
+.bps{width: 1200px;height:387px;position: relative;margin:0 auto;background:#fff;padding-left:11px;}
+.bps .shadow{width: 100%;height:8px;background: url(../img/bg-icons/bg_yinying.gif) no-repeat 0 0;text-indent: 9999px;position:absolute;bottom: 0;}
+ h3{border-bottom: 1px solid #b10000;font:16px/48px "";font-weight: bold;height:42px;}
+ h3 span{font:12px/48px "";color:#c8c9ca;}
+ h3  p{position: absolute;left:11px;top:43px;width:235px;height:3px;background:#b10000;}
+.bps .clear{height:320px;width:100%;padding-top:10px;}
+.bps .clear li{float: left;height:100%;overflow: hidden;}
+.bps .clear li a{float:left;border: none;}
+.bps .clear li a:hover{opacity:0.6;}
+.bps .clear .pic_1{width:480px;content:"";left:730px;position: absolute; }
+
+.clear:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.phone h3{border-bottom: 1px solid #b10000;font:16px/48px "";font-weight: bold;height:42px;}
+.phone h3 span{font:12px/48px "";color:#c8c9ca;}
+.phone h3  p{position: absolute;left:11px;top:43px;width:235px;height:3px;background:#b10000;}
+.phone{width: 1200px;height:547px;position: relative;margin:0 auto;background:#fff;padding-left:11px;}
+.s_banner{width:270px;height:480px;overflow: hidden;position: relative;top:10px;}
+.s_banner ul li{position: absolute;display: none;}
+.s_banner ul .first{display: block;}
+.s_banner ul{width:100%;height:100%;}
+.all_com{position: absolute;left:320px;width:895px;height:481px;top:56px;}
+.all_com li{font:12px/24px "";text-align:center;padding:0 10px 0 10px;float: left;width:158px;height:235px;border-right:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;}
+.all_com p span{color:#f00;}
+.all_com .no_br{border-right:none; }
+.all_com  .no_bt{border-bottom:none; }
+h3 ul li{float:left;font:12px/12px "";color:#c8c9ca;}
+h3 ul {position: absolute;left:930px;}
+h3 ul li a{color:#c8c9ca;border-right:1px solid #c8c9ca;padding:0 10px 0 10px;float:left;margin-top:21px;height:12px;}
+h3 ul{height:48px;display:inline-block;}
+/* ******************************************礼品箱包楼***************************************************** */
+.gift{width: 1200px;height:547px;position: relative;margin:0 auto;background:#fff;padding-left:11px;top:20px;}
+.gift h3 ul {left:890px;}
+.big_img{position: relative;left:26px;top:24px;margin: 0  auto;}
+/* ****************************more**************************************************** */
+.more_n{width:1210px;height:468px;position: relative;top:30px;left:10px;margin:0 auto;}
+.more_n .chuju{width:589px;height:236px;position: absolute;padding-left:10px;background: #fff;}
+.more_n .chuju h3 ul{left:315px;}
+.more_n .computer{width:588px;height:471px;position:absolute;left:621px;background:#fff;padding-left:10px;}
+.more_n .computer h3 ul{left:310px;}
+.more_n .s_banner{width:100%;position: absolute;top:60px;height:150px;}
+.shadow_1{width:100%;height:8px;left:0px;position: absolute;bottom:0;background:url(../img/bg-icons/bg_yinying1.jpg);}
+.more_n .computer .computers li{font:12px/20px "";text-align:center;float: left;width:185px;height:234px;border-right:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1; } 
+.more_n .computer .computers{height:234px;width:561px;position: absolute;left:20px;top:215px;}
+ .more_n .computer .computers span{color:#b10000;}
+ .more_n .computer .computers .no_br{border-right: none;}
+  .phone .col_u{left:669px;}  
+  .clothes{position: relative;top:40px;}
+    .clothes .no_bt{padding-top:10px;}
+  .phone .jug_u{left:720px;}
+  .huazhuang{position: relative;top:50px;}
+  .big_img2{position:relative;left:25px;top:60px;margin:0 auto;}
+  .hots{text-align:center;height:402px;width:1200px;margin: 0 auto;background:#fff;position:relative;top:70px;}
+  .hot_3{float: left;width:110px;height:170px;margin:6px;border:1px solid #e1e1e1;margin-top:0;}
+  .hots h1{font:18px/45px "";font-weight: bold;}
+  .hot_3 h2{font:14px/88px "";font-weight: bold;color:#b10000;}
+  .hot_3 p{font:12px/20px "";color:#9e9e9f;}
+
+.footer{position:relative;top:80px;}
+#nav {z-index:9999;width:60px; list-style:none; position:fixed; right:20px; bottom:50px; display:none;font:12px/30px "";color:#fff;}
+#nav li {width:60px; height:30px; line-height:30px; text-align:center; border-bottom:2px dotted #ccc; position:relative; cursor:pointer;background:#ab0001;}
+#nav li span {width:60px; height:30px; display:block; position:absolute; top:0; left:0; background:red; display:none;}
+#nav .last_li{background: #000;}

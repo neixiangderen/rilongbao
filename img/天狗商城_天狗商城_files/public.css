@@ -1,0 +1,105 @@
+﻿*{padding:0;margin:0;list-style:none;font-size:12px;}
+.clear{zoom:1}
+.clear:after{content:"";clear:both;display:block;}
+.clearf{clear:both;display:block;height:0;line-height:0;font-size:0;}
+img{border:0;}
+input{vertical-align:middle;}
+a{color:#070707;text-decoration:none;}
+a:hover{text-decoration:none;}
+b{ color:#d90000; font-weight:normal;}
+h1{ font-size:14px; color:#323232; font-family:微软雅黑; font-weight:normal;}
+.l{float:left} 
+.r{float:right; }
+.main {width:1200px; margin:0 auto;}
+.blue1,.blue1 a {color:#0066cc}
+.brown1,.brown1 a {color:#cc6500}
+.red1,.red1 a {color:#d62326}
+.gray1,.gray1 a {color:#676767;}
+
+
+/*通栏广告*/
+.tonglan-neiy{ margin:0 auto; background:#660000}
+.tonglan-neiy img{ width:1000px; height:100px; margin:0 auto; display:block;}
+
+
+/*标题*/
+.title{ border-bottom:solid 1px #B10000; height:24px; font-size:18px; padding:0px 0px 3px 5px; position:relative; margin-bottom:12px;}
+.title h3{ float:left; font-size:18px; height:24px; overflow:hidden;}
+.title span{ display:block; width:235px; height:3px; overflow:hidden; background:#B10000; position:absolute; left:0px; bottom:-4px; }
+.title em{ float:left; height:22px; overflow:hidden; font-style:normal; font-family:Arial, Helvetica, sans-serif; color:#C8C9CA; padding-left:5px; margin-top:3px;}
+.title .rightLink{ float:right; width:850px; height:16px; overflow:hidden; line-height:16px; margin-top:5px; white-space:nowrap; overflow:hidden; text-align:right; color:#888;}
+.title .rightLink a{ display:inline-block; margin:0 10px; color:#888;}
+.title .rightLink a.no_mr{ margin-right:0px;}
+.title .rightLink a:hover{ color:#CF0F4C;}
+.mr_bt{ margin-bottom:15px;}
+
+
+/*头部样式*/
+.top p{ width:1200px; margin: auto; height:30px; line-height:30px;}
+.top p a{ color:#ff6600; margin:0 5px;}
+.top p span{ float:right;}
+.top p span a{ color:#000; margin:0 5px;}
+.header{ width:1200px; margin:auto; padding-top:10px; height:90px}
+.logo { width:230px; float:left; }
+.logo a {display:block; width:230px;}
+.seach { float:right; width:666px; line-height:24px; margin-right:30px }
+.suol a{ margin:0 5px; }
+
+
+/*导航样式*/
+.menu-neuy {background:url(../images/menubg.jpg); height:43px; margin:1px 0; line-height:41px;}
+.menu {width:1200px; margin: auto; background:url(../images/menubg.jpg);}
+.menu ul {float:left; height:39px}
+.menu ul li {float:left; width:100px;}
+.leftmenu {width:120px; background:#940206; height:41px; border-top:2px solid #f22c2c; color:#fff; font-weight:bold; font-size:14px; text-align:center; float:left}
+.nav a { float:left; width:100px; height:39px; line-height:39px;  font-size:14px; display:block; border-left:1px solid #d4171a; border-right:1px solid #9f1113; margin:2px 0; color:#fff; text-align:center}
+.nav a:hover {background:#420500; margin:0; height:41px; line-height:39px; border-top:2px solid #120200; text-decoration:none}
+.nav .sel {background:#420500; margin:0; height:41px; line-height:39px; border-top:2px solid #120200;}
+.nob a{border:none;}
+.featured {padding-left:37px; line-height:43px; }
+.featured a {color:#ffc516; font-weight:bold}
+.menu_1 {background:#8d7f7e; height:42px; border-bottom:1px solid #766362; margin:1px 0; line-height:41px; font-size:14px;}
+.menu_1 .pf {position:relative; width:1200px; margin:auto}
+.menu_1 ul {background:#940206; height:44px; overflow:hidden;  top:-2px; position:absolute; width:1100px; padding-left:150px}
+.menu_1 ul li { float:left; height:39px; width:83px; text-align:center; line-height:39px; display:block; border-left:1px solid #880101; margin:2px 0; }
+.menu_1 ul li a{ font-size:14px;color:#FFF;}
+.menu_1 ul li a:hover {text-decoration:underline;color:#FFF;}
+
+/*充值*/
+.cz_dv{width:1240px;background:url(../images/cz.jpg) no-repeat;padding:100px 0 0px 0;height:411px;margin:0 auto; padding-top:150px}
+.cz{width:240px;height:240px;margin:auto}
+
+
+/*热门导航*/
+.hot_right {float:right; height:20px; line-height:20px;margin-top:0px; margin-right:30px; }
+.hot_right dl {float:right; height:20px; line-height:20px; margin-top:15px; }
+.hot_right dl dd { float:left; margin-right:10px; position: relative;color:#FFFFFF; }
+.hot_right dl dd a{ color:#FFFFFF; font-size:13px  }
+.hot_right dl dd a:hover{background:none; color:#FFDE00; text-decoration: underline }
+.hot{position:absolute; float:left; margin-right:5px; top:-10px; background:url(../images/hot.png) no-repeat; width:22px; height:22px}
+.new{position:absolute; float:left; margin-right:5px; top:-10px; background:url(../images/new.png) no-repeat; width:22px; height:22px}
+.go{position:absolute; float:left; margin-right:5px; top:-10px; background:url(../images/go.png) no-repeat; width:22px; height:22px}
+.diy{position:absolute; float:left; margin-right:5px; top:-10px; background:url(../images/diy.png) no-repeat; width:22px; height:22px}
+
+/*帮助中心*/
+.footerbg{WIDTH:1200px; margin:15px auto 0 auto; clear:both; background-color:#FFFFFF; padding-top:5px}
+.help_cent {PADDING: 10px; WIDTH: 1180px; BACKGROUND: #ffffff; HEIGHT: 193px;  margin:auto}
+.help_cent_l_t {BORDER-BOTTOM: #cccccc 1px solid; MARGIN: 50px 0px 0px 30px; WIDTH: 191px; HEIGHT: 30px; COLOR: #726b6b; FONT-SIZE: 14px}
+.help_cent_l_b {MARGIN: 0px 0px 0px 30px; WIDTH: 190px; HEIGHT: 30px; COLOR: #980101; FONT-SIZE: 16px; FONT-WEIGHT: bold}
+.help_cent_l {WIDTH: 240px; BACKGROUND: #f8f8f8; FLOAT: left; HEIGHT: 193px}
+.help_cent_l UL {MARGIN: 20px 0px 0px 40px}
+.help_cent_l UL LI {PADDING-BOTTOM: 5px; LINE-HEIGHT: 22px; PADDING-LEFT: 0px; WIDTH: 164px; PADDING-RIGHT: 0px; FLOAT: left; COLOR: #999999; FONT-SIZE: 12px; PADDING-TOP: 8px}
+.help_cent_l UL LI .phone {font:bold 20px/35px Arial, Helvetica, sans-serif;color:#c40000;display:block;}
+.help_cent_l UL LI SPAN {PADDING-LEFT: 15px}
+.help_cent_r {WIDTH: 920px; BACKGROUND: #f8f8f8; FLOAT: left; HEIGHT: 178px; MARGIN-LEFT: 10px; PADDING-TOP: 15px}
+.help_cent_r UL {PADDING-BOTTOM: 0px; PADDING-LEFT: 45px; WIDTH: 100px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 10px}
+.help_cent_r UL LI {LINE-HEIGHT: 28px; WIDTH: 80px; LIST-STYLE-IMAGE: url(../zimages/footer_icon.jpg)}
+.help_cent_r UL LI IMG {FLOAT: left; MARGIN-RIGHT: 3px}
+.help_cent_r UL LI H3 {FONT-SIZE: 12px; FONT-WEIGHT: bold}
+.help_cent_r UL LI.mar {MARGIN-LEFT: 10px}
+
+/*页脚*/
+.foot{width:1200px; margin:0px auto; padding-bottom:50px;  background:url(../images/bg_yinying.gif) no-repeat 0px bottom; background-color:#FFFFFF; text-align:center; clear:both}
+.footer{padding:10px; text-align:center; line-height:22px; text-align:center;}
+.friendlink{ margin:10px; padding:0px 10px 0px 10px;line-height:40px; border:#cccccc 1px solid; clear:both;}
+.friendlink a{ padding-left:13px;}

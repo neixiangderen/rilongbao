@@ -1,0 +1,17 @@
+.cart_body{width:1200px;}
+.tag{display: none;}
+.cart_body .cart_position{width:980px;margin: 18px auto 18px;text-align: center;}
+.tablein{width:950px;margin:0px auto 10px;padding: 15px;font-size: 12px;}
+.tablein table tr td{border: 1px solid #d5d5d5;}
+.tablein table {width:100%;margin: 0 auto;border-collapse: collapse;line-height: 25px;text-align: center;}
+.tablein table tfoot td{padding: 8px 5px;background: #f2f4f6;}
+.tablein table tfoot td p{float: right;}
+.tablein table tfoot td  b{color:#f00;}
+.tablein table tfoot th {padding-top:10px;}
+.tablein table tfoot th img{vertical-align: middle;}
+.tablein table tfoot th a{color:#070707;margin-bottom: 10px;font-weight: normal;}
+.tablein table tbody a{color:#666;}
+.minus{width:12px;height:12px;background:#f00;color:#fff;text-align: center;font-size: 16px;}
+.add{width:12px;height:12px;background:#0f0;color:#fff;text-align: center;font-size: 16px;}
+.a_c{padding:0  12px 0;}
+tbody .num{width:20px;text-align: center;margin:20px;}

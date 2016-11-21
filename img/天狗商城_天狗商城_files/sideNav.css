@@ -1,0 +1,44 @@
+﻿/*左侧导航*/
+.posic{ width:1200px; margin:0 auto; position:relative; z-index:5; }
+.bg{ position:absolute; top:-30px; width:135px; height:492px; z-index:8; background:url(../images/sideNav_bg.gif)}
+.sideNav{ width:135px;  padding-top:0px; position:absolute; top:-30px; z-index:10;}
+.sideNav ul{ display:none; position:absolute; left:136px; top:0px; width:200px; background:#8F0100; }
+.sideNav .navList{ width:135px; position:relative; padding-left:10px;}
+.sideNav h3{position:relative; width:135px; height:35px; line-height:35px;  cursor:pointer; text-align:center; font-size:14px;z-index:1; }
+
+.sideNav h3.icon_01 a{padding-left:30px; width:110px; background:url(../images/icon/li1.jpg) no-repeat left center;}
+.sideNav h3.icon_01 a.hover{padding-left:30px ;color:#940206; width:97px; background:url(../images/icon/li01.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF }
+.sideNav h3.icon_02 a{padding-left:30px; width:110px; background:url(../images/icon/li2.jpg) no-repeat left center;}
+.sideNav h3.icon_02 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li02.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_03 a{padding-left:30px; width:110px; background:url(../images/icon/li3.jpg) no-repeat left center;}
+.sideNav h3.icon_03 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li03.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_04 a{padding-left:30px; width:110px; background:url(../images/icon/li4.jpg) no-repeat left center;}
+.sideNav h3.icon_04 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li04.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_05 a{padding-left:30px; width:110px; background:url(../images/icon/li5.jpg) no-repeat left center;}
+.sideNav h3.icon_05 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li05.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_06 a{padding-left:30px; width:110px; background:url(../images/icon/li6.jpg) no-repeat left center;}
+.sideNav h3.icon_06 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li06.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_07 a{padding-left:30px; width:110px; background:url(../images/icon/li7.jpg) no-repeat left center;}
+.sideNav h3.icon_07 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li07.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_08 a{padding-left:30px; width:110px; background:url(../images/icon/li8.jpg) no-repeat left center;}
+.sideNav h3.icon_08 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li08.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_09 a{padding-left:30px; width:110px; background:url(../images/icon/li9.jpg) no-repeat left center;}
+.sideNav h3.icon_09 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li09.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_10 a{padding-left:30px; width:110px; background:url(../images/icon/li10.jpg) no-repeat left center;}
+.sideNav h3.icon_10 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li010.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_11 a{padding-left:30px; width:110px; background:url(../images/icon/li11.jpg) no-repeat left center;}
+.sideNav h3.icon_11 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li011.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_12 a{padding-left:30px; width:110px; background:url(../images/icon/li12.jpg) no-repeat left center;}
+.sideNav h3.icon_12 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li012.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_13 a{padding-left:30px; width:110px; background:url(../images/icon/li13.jpg) no-repeat left center;}
+.sideNav h3.icon_13 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li013.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_14 a{padding-left:30px; width:110px; background:url(../images/icon/li14.jpg) no-repeat left center;}
+.sideNav h3.icon_14 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li014.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_15 a{padding-left:30px; width:110px; background:url(../images/icon/li15.jpg) no-repeat left center;}
+.sideNav h3.icon_15 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li015.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_16 a{padding-left:30px; width:110px; background:url(../images/icon/li16.jpg) no-repeat left center;}
+.sideNav h3.icon_16 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li016.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3.icon_20 a{padding-left:30px; width:110px; background:url(../images/icon/li20.jpg) no-repeat left center;}
+.sideNav h3.icon_20 a.hover{padding-left:30px;color:#940206; width:97px; background:url(../images/icon/li020.jpg) no-repeat 5px center; border:2px solid #e3001d; border-right:none; background-color:#FFFFFF}
+.sideNav h3 a{ width:100px; height:35px; color:#FFFFFF; cursor:pointer; text-align:left; font-size:14px; display:block;}
+.sideNav h3 a:hover {color:#940206; }

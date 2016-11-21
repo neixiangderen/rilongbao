@@ -1,0 +1,50 @@
+.register{width:541px;height:342px;border:2px dashed #d9d9d9;background:#fff;position:relative;left:62px;top:17px;}
+.login{width:540px;height:342px;border:2px dashed #d9d9d9;background:#fff;position: relative;left:657px;top:-325px;}
+.wrap{width:100%;}
+.tag{display: none;}
+form h2{font:14px/60px "";}
+form h2 span{font:12px/60px "";color:#b10000;}
+
+form{padding-left:20px;}
+.first_td{font:14px/24px "";text-align: right;}
+.register form p{height:10px;width:1px;}
+.last_td{font:14px/24px "";text-align:left;font-weight: bold;}
+.register #btn{border:none;width:107px;height:32px;text-indent:-9999px;position:absolute;left:90px;background:url(../img/bg-icons/regbgs.gif) no-repeat;}
+ .login p span{width:56px;display:inline-block;text-align: right;font:14px/24px "";}
+ .login p {margin-top:15px;}
+ .login p strong a{color:#000;font:14px/24px "";font-weight: bold;}
+ .login p strong{text-indent: 12px;display: inline-block;}
+ .login #btn_1{width:98px;height:30px;background:url(../img/bg-icons/loginsub.gif) no-repeat;position: absolute;left:80px;border:none;text-indent:-9999px;top:162px;}
+ .Validform_checktip{
+	margin-left:8px;
+	line-height:20px;
+	height:20px;
+	overflow:hidden;
+	color:#999;
+	font-size:12px;
+}
+.Validform_right{
+	color:#71b83d;
+	padding-left:20px;
+	background:url(../img/bg-icons/right.png) no-repeat left center;
+}
+.Validform_wrong{
+	color:red;
+	padding-left:20px;
+	white-space:nowrap;
+	background:url(../img/bg-icons/error.png) no-repeat left center;
+}
+.Validform_loading{
+	padding-left:20px;
+	background:url(../img/bg-icons/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+	background-color:#ffe7e7;
+}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:50%; right:50%; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}
+#msgalert{position:absolute;top:30px;left:50%;border:1px solid #e7e7e7;font:18px/24px "楷体";height:24px;color:#f00;}

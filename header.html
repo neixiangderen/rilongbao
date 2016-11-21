@@ -1,0 +1,146 @@
+
+<!-- 	<link rel="stylesheet" type="text/css" href="css/public.css">
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+ -->
+ 
+   <script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+  $(function(){
+   var amk =0;
+      $.cookie.json = true;
+      var products = $.cookie("products");
+   if($.cookie("products"))
+   amk = products.length;
+   $(".cart .sp_2").html(amk);
+   })
+	</script>
+	<script type="text/javascript">
+	$(function(){
+	 $.when($.ajax("json/userinfo.json"))
+	 .done(function(data){
+	 	var array = data[0].f1;
+	 	$(".content").load(data[0].f1);
+	 })
+	})
+	</script>
+ <script type="text/javascript">
+ $(function(){
+ 	$(".tag ul li").each(function(){
+ 		$(this).hover(function(){
+ 			$(this).children("div").css({
+ 				"display":"block"
+ 			}).end().siblings().children("div").css({
+ 				"display":"none"
+ 			})
+ 		},function(){
+             $(this).children("div").css({
+ 				"display":"none"
+ 			}).end().siblings().children("div").css({
+ 				"display":"none"
+ 			})
+ 		})
+ 	})
+ })
+ </script>
+ <script type="text/javascript">
+ $(function(){
+ 	$(".nav_a").on("click",function(){
+ 		$(".tag").show();
+ 	});
+ 	$(".tag").mouseleave(function(){
+ 		$(this).hide();
+ 	})
+ })
+ </script>
+ <script type="text/javascript">
+  $(function(){
+  	$(".tag ul .li_1").hover(function(){
+  		$(this).css({
+  			"border":"2px solid #e3001d",
+  			"border-right":"none",
+  			"color":"#940206",
+  			"background":"#fff"
+  		}).children("a").css({
+  			"color":"#940206"
+  		})
+  	},function(){
+           $(this).css({
+  			"border":"none",
+  			"color":"#fff",
+  			"background":"url(../img/bg-icons/sideNav_bg.gif) no-repeat"
+  		}).children("a").css({
+  			"color":"#fff"
+  		})
+  	})
+  })
+ </script>
+<div class="wrap">
+<div class="header1"><span class="sp_1">您好: 欢迎光临天狗商城！[<a href="login.html">请登录</a>], 新用户？[<a href="signin.html">免费注册</a>]
+</span><div class="cart"><a href="cart.html">购物车<span class="sp_2"></span>件</a></div>
+<ul>
+<li class="first"><a href="#">我的订单</a></li>
+<li><a href="#">网站地图</a></li>
+<li><a href="#">帮助中心</a></li>
+<li><a href="#">加入收藏</a></li>
+<li class="last"><a href="#">设为首页</a></li>
+</ul>
+</div>
+<!--****************header1结束*********************-->
+<div class="header2">
+<a href="index.html"><img src="img/logos/logo.jpg" alt="天狗"></a>
+<span class="s_sp">商品</span>
+<div class="serach_1"><input type="text" placeholder="多搜搜，意外惊喜等你拿" class="txt"><button class="btn">搜素</button></div>
+<p class="serach_t">
+<a href="#">手机</a>/<a href="#">钟表</a>/<a href="#">家电</a>/<a href="#">电脑</a>/<a href="#">男装</a>/<a href="#">女装</a>/<a href="#">灯具</a>/<a href="#">童装</a>/<a href="#">儿童玩具</a>/<a href="#">笔记本</a>/<a href="#">平板</a>/<a href="#">相机</a>/<a href="#">鞋</a>
+</p>
+</div>
+</div>
+<!--****************header2结束*********************-->
+<div class="wrap">
+<div class="nav">
+<div class="nav_a">所有商品分类</div>
+<ul class="ul_1">
+	<li><a href="index.html">首页</a></li>
+	<li><a href="list.html">手机数码</a></li>
+	<li><a href="#">礼品箱包</a></li>
+	<li><a href="#">厨具用品</a></li>
+	<li><a href="#">电脑办公</a></li>
+	<li><a href="#">服饰鞋帽</a></li>
+	<li><a href="#">个护化妆</a></li>
+	<li><a href="#">母婴用品</a></li>
+</ul>
+<div class="more">
+<p class="hot"><a href="#">分销</a></p>
+<p class="new"><a href="#">导航</a></p>
+<p class="diy"><a href="#">团购</a></p>
+<p class="go"><a href="#">充值</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="un_use">
+<div class="grey"></div>
+<div class="red_1"></div>
+<div class="grey_1"></div>
+<div class="tag">
+<ul>
+	<li class="li_1"><a href="#"><img src="img/lis/li11.jpg">家用电器</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li7.jpg">珠宝首饰</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li8.jpg">时尚钟表</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li9.jpg">运动健康</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li16.jpg">图书音像</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li5.jpg">家具家装</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li6.jpg">厨具用品</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li10.jpg">电脑办公</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li1.jpg">服饰鞋帽</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li2.jpg">个护化妆</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li12.jpg">汽车用品</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li14.jpg">玩具乐器</a><i></i><div class="content"></div></li>
+	<li class="li_1"><a href="#"><img src="img/lis/li15.jpg">食品保健</a><i></i><div class="content"></div></li>
+	
+</ul> 
+</div>
+</div>
+</div>

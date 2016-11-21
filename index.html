@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <link rel="shortcut icon"  href="img/bg-icons/right.png" type="image/x-icon">
+	<title>天狗商城</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/public.css">
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery.cookie.js"></script>
+  <!-- <script type="text/javascript">
+  $(function(){
+    var str;
+    var str1;
+   $(".tag ul li a").hover(function(){
+    $(".content").show();
+    $(".content").load("content_1.html");
+    str = $(this).html();
+    var index = str.indexOf("img/lis/li");
+     str1  = str.substr(0,index+10)+"0"+str.substring(index+10);
+        $(this).html(str1);
+        $(".content").css({
+          "left":208,
+          "top":$(this).parents($("li")).index()*30+180
+        })
+       
+   },function(){
+     $(".content").hide();
+    $(this).html(str);
+   });
+  });
+  </script> -->
+	<script type="text/javascript">
+
+	$(function(){
+ 
+		  $(".header").load("header.html");
+          $(".footer").load("footer.html");
+  
+   $(".l_1").on("click",function(){
+     var index =  $(this).index();
+     $(this).css({
+      "background":"#bb0000",
+      "color":"#fff"
+     }).siblings("li").css({
+      "background":"#fff",
+       "color":"#000"
+     })
+  
+     $(".window_1").css({
+      "left":-1*index*876
+     })
+   })
+   $(".l_2").on("click",function(){
+     var index =  $(this).index();
+      
+     $(".window_1").css({
+      "left":-1*index*876
+     })
+     $(this).css({
+      "background":"#bb0000",
+      "color":"#fff"
+     }).siblings("li").css({
+      "background":"#fff",
+       "color":"#000"
+     })
+   })
+   $(".l_3").on("click",function(){
+     var index =  $(this).index();
+      
+     $(".window_1").css({
+      "left":-1*index*876
+     })
+     $(this).css({
+      "background":"#bb0000",
+      "color":"#fff"
+     }).siblings("li").css({
+      "background":"#fff",
+       "color":"#000"
+     })
+   })
+   $(".l_4").on("click",function(){
+     var index =  $(this).index();
+     $(".window_1").css({
+      "left":-1*index*876
+     })
+     $(this).css({
+      "background":"#bb0000",
+      "color":"#fff"
+     }).siblings("li").css({
+      "background":"#fff",
+       "color":"#000"
+     })
+   })
+	})
+
+	
+ 
+	</script>
+  <script type="text/javascript">
+  $(function(){
+    var indeX = 0,
+         index2=0,
+         index3=0,
+         index4 =0,
+         index6 = 0,
+         index5 =0,
+        timer1 =null,
+        timer2 =null,
+        timer3 =null,
+        timer4 =null,
+        timer5 =null,
+        timer6 =null;
+       
+  timer1 =setInterval(function(){
+  
+     $(".s1 li").eq(indeX).fadeOut();
+     indeX++;
+     if(indeX>=4){
+      
+      indeX =0;
+    }
+     $(".s1 li").eq(indeX).fadeIn();
+    
+     
+    
+  },3000);
+    timer2 =setInterval(function(){
+  
+     $(".s2 li").eq(index2).fadeOut();
+     index2++;
+     if(index2>=4){
+      
+      index2 =0;
+    }
+     $(".s2 li").eq(index2).fadeIn();
+    
+  },2500);
+     timer3 =setInterval(function(){
+  
+     $(".s3 li").eq(index3).fadeOut();
+     index3++;
+     if(index3>=4){
+      
+      index3 =0;
+    }
+     $(".s3 li").eq(index3).fadeIn();
+    
+  },2100);
+      timer4 =setInterval(function(){
+  
+     $(".s4 li").eq(index4).fadeOut();
+     index4++;
+     if(index4>=4){
+      
+      index4=0;
+    }
+     $(".s4 li").eq(index4).fadeIn();
+    
+  },3000);
+        timer5 =setInterval(function(){
+  
+     $(".s5 li").eq(index5).fadeOut();
+     index5++;
+     if(index5>=2){
+      
+      index5=0;
+    }
+     $(".s5 li").eq(index5).fadeIn();
+    
+  },2540);
+          timer6 =setInterval(function(){
+  
+     $(".s6 li").eq(index6).fadeOut();
+     index6++;
+     if(index6>=2){
+      
+      index6=0;
+    }
+     $(".s6 li").eq(index6).fadeIn();
+    
+  },2000);
+
+  })
+
+  </script>
+    <script type="text/javascript">
+   $(document).ready(function(){
+    $(window).on("load",function(){
+      var $lis = $("#container li"),
+      len = $lis.length,
+      liWidth = $lis.eq(0).outerWidth(),
+      index = 2,
+     timer =null,
+      html="",
+     $first = $lis.eq(0).clone(true),
+     $last  = $lis.eq(len-1).clone(true);
+    $("#container ul").append($first).prepend($last);
+    len += 2;
+      function move(){
+        var _left = -1*index*liWidth;
+        //计算小圆点的索引
+        var circleIndex = index>len-2?0:index -1;
+         $("#pages div").eq(circleIndex).addClass('curr').siblings().removeClass('curr');
+           index++;
+       $("#container ul").animate({left:_left},function(){
+        if(index >= len){
+           index = 2;
+           $("#container ul").css("left",-liWidth);
+        }/*else if(idnex === 1){
+          idnex = len-1;
+          $("#box ul").css("left",-1*liWidth*(len-2));
+        }*/
+       });
+    };
+
+    $("#container ul").width(len*liWidth);
+    $("#container ul").css("left", -liWidth);
+    for(var i = 0;i<len - 2;i++){
+      html += '<div>'+ (i+1) +'</div>'
+    }
+    $(html).appendTo("#pages").eq(0).addClass('curr');
+    $("#pages div").on("click",function(){
+        
+       index = $(this).index() + 1;
+       move();
+    })
+   //timer =  setInterval(move,3000);
+   $("#container ul").hover(function(){
+      clearInterval(timer);
+   },function(){
+      timer = setInterval(move,3000);
+   }).trigger("mouseleave");
+ 
+  });
+
+      
+   });
+
+  </script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="wrap">
+
+	<div id="container">
+   
+     <ul>
+     	<li class="img_1"><a href="#"></a></li>
+     	<li class="img_2"><a href="#"></a></li>
+     	<li class="img_3"><a href="#"></a></li>
+     	<li class="img_4"><a href="#"></a></li>
+     </ul>
+    <div class="ad_1">
+   <a href="#"><img src="img/banner/tg0591_falsh4.gif" alt=""></a>
+      <a href="#"><img src="img/banner/tg0591_falsh4.gif" alt=""></a>
+         <a href="#"><img src="img/banner/tg0591_falsh4.gif" alt=""></a>
+    </div>
+	</div>
+   <div id="pages"></div>
+	</div>
+	<div class="wrap">
+     <div class="logos">
+     <a href="#"><img src="img/logos/p201312061100260276.jpg" alt=""></a>
+     <a href="#"><img src="img/logos/p201404011334302415.jpg" alt=""></a>
+     <a href="#"><img src="img/logos/p201406071435494008.jpg" alt=""></a>
+     <a href="#"><img src="img/logos/p201603151537553117.jpg" alt=""></a>
+     <a href="#"><img src="img/logos/p201603161259330219.jpg" alt=""></a>
+     <a href="#"><img src="img/logos/p201603161302213462.jpg" alt=""></a>
+     <a href="#"><img src="img/logos/p201603212021240460.jpg" alt=""></a>
+     <div class="shadow"></div>
+     </div>
+	</div>
+	<div class="wrap">
+  <div class="coms floor">
+	<div class="com">
+     <ul class="s_nav">
+     <li class="l_1">秒杀</li>
+     <li class="l_2">超值特惠</li>
+     <li class="l_3">人气热卖</li>
+     <li class="l_4">今日抢购</li>
+     </ul>
+     <div class="window_1">
+     <div>
+     <a href="details.html"><img src="img/indexad/midP20160312152807378.jpg" alt="三星"></a>
+     <p>Apple/苹果 iPhone 5c电信版手机苹果5C 8g/32g 全国联保</p>
+     <p>抢购价格：<span>￥4668元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20130125140233185.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动lala...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20130131100901989.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20130424142002630.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20130428091631683.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20130128160238754.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div>
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+      <div class="last">
+     <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>三星S6 9208金，金属边框/玻璃机身，0.7秒快速启动...</p>
+     <p>抢购价格：<span>￥3735元</span></p>
+     <p>秒杀已结束</p>
+     </div>
+     </div>
+     </div>
+     <div class="com_1"><a href="#"><img src="img/banner/tg0591_falsh18.jpg"></a></div>
+     </div>
+	</div>
+  <div class="wrap">
+ <div class="bps floor">
+<h3>会员促销 <span>Brand Promotions</span><p></p></h3>
+<ul class="clear">
+  <li><a href="#"><img src="img/banner/tg0591_falsh11.jpg" alt="iphone"></a> </li>
+  <li> 
+  <a href="#"><img src="img/banner/tg0591_falsh13.jpg" alt="iphone"></a> </li>
+  <li><a href="#"><img src="img/banner/tg0591_falsh14.jpg" alt="iphone"></a> </li>
+  <li class="pic_1"><a href="#"><img src="img/banner/tg0591_falsh15.jpg" alt="iphone"></a> 
+        <a href="#"><img src="img/banner/tg0591_falsh16.jpg" alt="iphone"></a> 
+        <a href="#"><img src="img/banner/tg0591_falsh17.jpg" alt="iphone"></a> </li>
+</ul>
+<div class="shadow"></div>
+ </div>
+ <div class="phone floor">
+ <h3>手机数码 <span>Brand Promotions</span><p></p><ul>
+   <li><a href="#">手机通讯</a></li>
+   <li><a href="#">手机配件</a></li>
+   <li><a href="#">摄影摄像</a></li>
+   <li><a href="#">时尚影音</a></li>
+ </ul></h3>
+ <div class="s1 s_banner">
+ <ul class="fade_box">
+   <li class="first"><a href="#"><img src="img/others/zmgd888_falsh20.jpg" alt="phone"></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh24.jpg" alt=""></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh25.jpg" alt=""></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh26.jpg" alt=""></a></li>
+ </ul>
+  </div>
+ <ul class="all_com">
+  <li>
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li>
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li>
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li>
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_br">
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_bt">
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_bt">
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_bt">
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_bt">
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_bt no_br">
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+</ul>
+ </div>
+
+ </div>
+ <div class="wrap">
+ <div class="gift floor">
+ <h3>礼品箱包 <span>Brand Promotions</span><p></p><ul>
+   <li><a href="#">潮流女包</a></li>
+   <li><a href="#">时尚男包</a></li>
+   <li><a href="#">功能箱包</a></li>
+   <li><a href="#">礼品</a></li>
+    <li><a href="#">奢侈品</a></li>
+ </ul></h3>
+ <div class="s2 s_banner">
+ <ul class="fade_box">
+   <li class="first"><a href="#"><img src="img/others/zmgd888_falsh20.jpg" alt="phone"></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh24.jpg" alt=""></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh25.jpg" alt=""></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh26.jpg" alt=""></a></li>
+ </ul>
+  </div>
+  <p class="shadow"></p>
+ </div>
+ <a href="#"><img class="big_img" src="img/others/zmgd888_falsh38.jpg" alt=""></a>
+ </div>
+  </div>
+  <div class="wrap">
+  <div class="more_n floor">
+   <div class="chuju">
+ <h3>厨具用品 <span>Brand Promotions</span><p></p><ul>
+   <li><a href="#">烹饪锅具</a></li>
+   <li><a href="#">刀剪砧板</a></li>
+   <li><a href="#">收纳保鲜</a></li>
+   <li><a href="#">水具酒具</a></li>
+ </ul></h3>
+ <div class="s5 s_banner">
+ <ul class="fade_box">
+   <li class="first"><a href="#"><img src="img/others/zmgd888_falsh28.jpg" alt="phone"></a></li>
+   <li><a href="#"><img src="img/others/zmgd888_falsh29.jpg" alt=""></a></li>
+ </ul>
+  </div>
+   <p class="shadow_1"></p>
+   </div>
+   <div class="computer">
+    <h3>电脑办公 <span>Brand Promotions</span><p></p><ul>
+   <li><a href="#">电脑整机</a></li>
+   <li><a href="#">电脑配件</a></li>
+   <li><a href="#">外设产品</a></li>
+   <li><a href="#">网络产品</a></li>
+ </ul></h3>
+ <div class="s6 s_banner">
+ <ul class="fade_box">
+   <li class="first"><a href="#"><img src="img/others/zmgd888_falsh30.jpg" alt="phone"></a></li>
+   <li><a href="#"><img src="img/others/zmgd888_falsh31.jpg" alt=""></a></li>
+ </ul>
+  </div>
+  <ul class="computers">
+    <li><a href="#"><img src="img/indexad/midP20130127143251661.jpg" alt=""></a>
+  <p>惠普（HP）Envy dv4-5213tx 14.0英寸笔记本</p>
+  <p><span>￥4682元</span></p>
+
+    </li>
+    <li><a href="#"><img src="img/indexad/midP20130128160238754.jpg" alt=""></a>
+     <p>惠普（HP）Envy dv4-5213tx 14.0英寸笔记本</p>
+  <p><span>￥4682元</span></p</li>
+    <li class="no_br"><a href="#"><img src="img/indexad/midP20130604152951152.jpg" alt=""></a>
+     <p>惠普（HP）Envy dv4-5213tx 14.0英寸笔记本</p>
+  <p><span>￥4682元</span></p></li>
+  </ul>
+ <p class="shadow_1"></p>
+   </div>
+  </div>
+  </div>
+<div class="wrap">
+<div class="phone clothes floor">
+ <h3>服饰鞋帽 <span>Brand Promotions</span><p></p>
+ <ul class="col_u">
+   <li><a href="#">男装</a></li>
+   <li><a href="#">女装</a></li>
+   <li><a href="#">运动</a></li>
+   <li><a href="#">内衣</a></li>
+    <li><a href="#">配饰</a></li>
+     <li><a href="#">男鞋</a></li>
+      <li><a href="#">女鞋</a></li>
+       <li><a href="#">童鞋</a></li>
+        <li><a href="#">童装</a></li>
+         <li><a href="#">裤子</a></li>
+          <li><a href="#">情侣套装</a></li>
+ </ul></h3>
+ <div class=" s3 s_banner">
+ <ul class="fade_box">
+   <li class="first"><a href="#"><img src="img/others/zmgd888_falsh20.jpg" alt="phone"></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh24.jpg" alt=""></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh25.jpg" alt=""></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh26.jpg" alt=""></a></li>
+ </ul>
+  </div>
+ <ul class="all_com">
+  <li>
+ <a href="#"><img src="img/indexad/midP20130112110730991.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li>
+ <a href="#"><img src="img/indexad/midP20130112110730991.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li>
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li>
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_br">
+ <a href="#"><img src="img/indexad/midP20130112110730991.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_bt">
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_bt">
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_bt">
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_bt">
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_bt no_br">
+ <a href="#"><img src="img/indexad/midP20130112110730991.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+</ul>
+ </div>
+</div>
+<div class="wrap">
+<div class="phone huazhuang floor">
+ <h3>个护化妆 <span>Brand Promotions</span><p></p>
+ <ul class="jug_u">
+   <li><a href="#">面部护理</a></li>
+   <li><a href="#">身体护理</a></li>
+   <li><a href="#">口腔护理</a></li>
+   <li><a href="#">女性护理</a></li>
+    <li><a href="#">魅力彩妆</a></li>
+     <li><a href="#">香水SPA</a></li>
+      <li><a href="#">男士护理</a></li>
+ </ul></h3>
+ <div class="s4 s_banner">
+ <ul class="fade_box">
+   <li class="first"><a href="#"><img src="img/others/zmgd888_falsh20.jpg" alt="phone"></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh24.jpg" alt=""></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh25.jpg" alt=""></a></li>
+   <li><a href="#"><img src="img/banner/tg0591_falsh26.jpg" alt=""></a></li>
+ </ul>
+  </div>
+ <ul class="all_com">
+  <li>
+ <a href="#"><img src="img/indexad/midP20130131100901989.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li>
+ <a href="#"><img src="img/indexad/midP20130424133451693.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li>
+ <a href="#"><img src="img/indexad/midP20130424142002630.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li>
+ <a href="#"><img src="img/indexad/midP20160313145249235.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+   <li class="no_br">
+ <a href="#"><img src="img/indexad/midP20130125140233185.jpg" alt="三星"></a>
+     <p>魅族 PR05 64GB 银白色 移动联通双4G手机 双卡双待</p>
+     <p><span>￥3735元</span></p>
+  </li>
+</ul>
+ </div>
+<p><a href="#"><img class="big_img2" src="img/others/zmgd888_falsh39.jpg" alt=""></a></p>
+  <div class="hots floor">
+ <h1>热门商品分类</h1>
+ <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+  <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+  <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+  <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+  <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+  <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+  <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+  <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+  <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+ <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+  <div class="hot_3">
+<h2>珠宝首饰</h2>
+<p>时尚纯品</p>
+<p>纯金K金</p>
+<p>精英投资</p>
+ </div>
+  </div>
+</div>
+<div class="wrap">
+<ul id="nav">
+    <li>1L<span style="display:block;">秒杀</span></li>
+    <li>2L<span>会员促销</span></li>
+    <li>3L<span>手机数码</span></li>
+    <li>4L<span>礼品箱包</span></li>
+    <li>5L<span>厨具电脑</span></li>
+    <li>6L<span>服饰鞋帽</span></li>
+    <li>7L<span>个护化妆</span></li>
+    <li>8L<span>热门商品</span></li>
+    <li class="last_li">顶部</li>
+  </ul>
+  </div>
+
+	<div class="footer"></div>
+  <script type="text/javascript">
+    $(function(){
+      $(window).on("load",function(){
+      var winHeight = $(window).height(), // 窗口高度
+    headerHeight =$(".floor").eq(0).offset().top; // 头部布局高度
+        
+
+      $(window).on("scroll", function(){
+        var _scrollTop = $(this).scrollTop();// 滚动高度
+        // 判断是否显示导航
+        console.log(headerHeight,winHeight);
+        if (_scrollTop > headerHeight/2) {
+          $("#nav").stop().fadeIn();
+        } else {
+          $("#nav").stop().fadeOut();
+        }
+        // 切换导航中的样式
+        $(".floor").each(function(index, element){
+          if (_scrollTop > $(element).offset().top - winHeight / 3) {
+            $("#nav li").eq(index).find("span").show().end()
+                  .siblings().find("span").hide();
+          }
+          })
+        });
+      });
+
+      // 点击楼层导航
+      $("#nav li:not(:last)").on("click", function(){
+        // 获取当前点击 li 的索引
+        var index = $(this).index();
+        // 让 .floor 滚动
+        console.log(index);
+        var _top = $(".floor").eq(index).offset().top;
+         console.log(index,_top);
+        $("html,body").animate({"scrollTop":_top});
+      }).hover(function(){
+        $(this).children('span').show();
+      }, function(){
+        $(this).children('span').hide();
+      });
+
+      // 回到顶部
+
+      $("#nav li:last").on("click", function(){
+        $(window).scrollTop(0);
+        $(this).siblings().children('span').hide();
+      });
+    });
+  </script>
+</body>
+</html>
